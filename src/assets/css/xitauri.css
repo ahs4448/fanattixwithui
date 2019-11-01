@@ -819,7 +819,7 @@ textarea { height: auto; }
 	padding: 30px 15px 15px;
 	background-color: var(--white);
 	overflow: hidden;
-    white-space: nowrap;
+/*     white-space: nowrap; */
    	text-overflow: ellipsis !important;
 }
 .event-card-text h4:first-of-type:after { 
