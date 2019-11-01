@@ -36,7 +36,10 @@ export class NavigationComponent implements OnInit {
   toggleAccountMenu() {
     console.log(this.accountMenu)
     this.accountMenu = this.accountMenu == true ? false : true
-    document.getElementById("navigation-right").style.display = "none";
+    
+    if(window.innerWidth<730){
+     document.getElementById("navigation-right").style.display = "none";
+    }
   }
 
   test() {
