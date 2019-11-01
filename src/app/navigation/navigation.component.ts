@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  alert('something')
   if (window.innerWidth < 730) {
     document.getElementById("navigation-right").style.display = "none";
   }
