@@ -2,15 +2,26 @@
     <div class="frame">
       <div class="bit-1">
         <ul id="navigation-left">
-          <a routerLink="/"><h5>Fanattix</h5></a>
+          <a routerLink="/"><div class="nav-logo"><img id="nav-img" src="../assets/imgs/fanattix-logo.PNG"></div></a>
         </ul>
+        <input type="checkbox" id="mobile-menu" name="mobile-menu"> 
+        <label for="mobile-menu" id="mm" (click)="MobileMenu()">&#9776;</label>
+        <li id="user-circle" (click)="toggleAccountMenu()"><i class="fas fa-user-circle"></i></li>
+        <div class="account-menu" *ngIf="accountMenu==true"><app-user-menu></app-user-menu></div>
         <ul id="navigation-right">
-          <li><a routerLink="/">Home</a></li>
-          <li><a class="create-event" routerLink="creator">Event Creator</a></li>
-          <li><a class="create-event" routerLink="search">Search Events</a></li>
-          <li (click)="toggleAccountMenu()"><i class="fas fa-user-circle"></i></li>
-          <div class="account-menu" *ngIf="accountMenu==true"><app-user-menu></app-user-menu></div>
+          <li><a routerLink="/" (click)="test()">Home</a></li>
+          <li><a class="create-event" routerLink="creator" (click)="test()">Event Creator</a></li>
+          <li><a class="create-event" routerLink="search" (click)="test()">Search Events</a></li>
+          <div id="dropdown">
+            <li id="dropbtn"><a routerLink="overview" (click)="test()">Overview<span id="dropdown-arrow">&nbsp;&#8964;</span></a></li>
+            <div class="dropdown-content" id="dd">
+              <a routerLink="pricing" (click)="test()">Pricing</a>
+              <a routerLink="faq" (click)="test()">FAQ</a>
+            </div>
+          </div>
+          <li><a routerLink="contact" (click)="test()">Contact</a></li>
         </ul>
       </div>
     </div>
   </div>
+
